@@ -14,7 +14,7 @@
             echo "<p> Aucun produit en session...</p>";
         }
         else{
-            echo "<table border=1>",
+            echo "<table class='table table-striped'>",
                     "<thead>",
                     "<tr>",
                     "<th>#</th>",
@@ -33,9 +33,9 @@
                         "<td>".$index."</td>",
                         "<td><a href='traitement.php?action=product&id=$index'>".$product['name']."</a></td>",
                         "<td>".number_format($product['price'], 2, ", ", "&nbsp"). "&nbsp;€</td>",
-                        "<td><a href='traitement.php?action=down-qtt&id=$index'>-</a>".$product['qtt']."<a href='traitement.php?action=up-qtt&id=$index'>+</a></td>",
+                        "<td><a class='btn btn-outline-secondary btn-left' href='traitement.php?action=down-qtt&id=$index'>-</a>" . $product['qtt'] . "<a class='btn btn-outline-secondary btn-right' href='traitement.php?action=up-qtt&id=$index'> + </a></td>",
                         "<td>".number_format($product['total'], 2, ", ", "&nbsp"). "&nbsp;€</td>",
-                        "<td><a id='deleteButton' href='traitement.php?action=delete&id=$index'>Supprimer le produit</a></td>",
+                        "<td><a class='btn btn-outline-danger deleteButton' href='traitement.php?action=delete&id=$index'>Supprimer le produit</a></td>",
                         "</tr>";
                         $totalGeneral += $product['total'];
                     }
@@ -51,7 +51,7 @@
 
 
 
-<a href="traitement.php?action=clear">Vider le panier</a>
+<a href="traitement.php?action=clear" class="btn btn-outline-danger">Vider le panier</a>
 
 
 <?php

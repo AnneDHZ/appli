@@ -11,35 +11,35 @@
                 <p>
                     <label class="label">
                         Nom du produit : 
-                        <input type="text" name ="name" class="input">
+                        <input type="text" name ="name" class="form-control" placeholder="Nom">
                     </label>
                 </p>
                 <p>
                     <label class="label">
                         Prix du produit :  
-                        <input type="number" step="any" name="price" class="input">
+                        <input type="number" step="any" name="price" class="form-control" placeholder="0.00">
                     </label>
                 </p>
                 <p>
                     <label class="label">
                         Quantité désirée : 
-                        <input type="number" name="qtt" value="1" class="input">
+                        <input type="number" name="qtt" value="1" class="form-control">
                     </label>
                 </p>
                 <p>
                     <label class="label">
                         Descritption du produit :
-                    <textarea name="about" id=""></textarea>
+                    <textarea name="about" id="" class="form-control" placeholder="Il est beau mais pas que! Il est aussi..."></textarea>
                     </label>
                 </p>
                 <p>
                     <label class="label">
                         URL de l'image :
-                        <input type="url" name="img" id="">
+                        <input type="url" name="img" id="" class="form-control" placeholder="www.">
                     </label>
                 </p>
                 <p>
-                    <input type="submit" name="submit" value="Ajouter le produit" class="submit">
+                    <input type="submit" name="submit" value="Ajouter le produit" class="btn btn-outline-success">
                 </p>
             </form>    
         </div>

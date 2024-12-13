@@ -7,14 +7,20 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="style.css">
         <title><?= $title ?></title>
     </head>
     <body>
         <nav class="navbar">
-            <a href="index.php">Commande</a>
-            <a href="recap.php">Panier</a>
-            <p><?= $totalProduits; ?> produits en session</p>
+            <p>
+                <a href="index.php" class="navbar-brand">Commande</a>
+            </p>
+            <p>
+                <a href="recap.php" class="navbar-brand">Panier :</a>
+                <span class="navbar-brand"><?= $totalProduits; ?> produits en session</span>
+            </p>
+            <!-- <p class="navbar-brand"></p> -->
         </nav>
 
         <main>
@@ -29,11 +35,14 @@
 
             <?= $content ?>
         </main>
-
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
         <script>
-
-            document.getElementById("deleteButton").addEventListener("click", function(event) {
-                confirmation(event);
+            const deleteButtons = document.querySelectorAll('.deleteButton')
+                deleteButtons.forEach((deleteButton) => {
+                deleteButton.addEventListener("click", (event) => {
+                    confirmation(event);
+                })
             })
 
             function confirmation(event) {
@@ -43,5 +52,6 @@
                 }
             }
         </script>
+
 </body>
 </html>
