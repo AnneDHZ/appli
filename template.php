@@ -1,8 +1,5 @@
 <?php
-if (session_status() == PHP_SESSION_NONE) {
-    session_start();
-}
-$headerNavbar = basename($_SERVER['PHP_SELF']);
+// session_start();
 ?>
 
 <!DOCTYPE html>
@@ -11,30 +8,40 @@ $headerNavbar = basename($_SERVER['PHP_SELF']);
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
-    <?php
-        switch ($headerNavbar){
-            case "index": ($_SERVER['PHP_SELF'] == '/index.php');
-                echo "<title>Ajout produit</title>";
-                break;
-            case "recap": ($_SERVER['PHP_SELF'] == '/recap.php');
-                echo "<title>Récapitulatif des produits</title>";
-                break; 
-            case "autre":
-                echo "<title>Mon site</title>";
-                break;
-        }    
-    ?>
-        
-        
+        <title><?= $title ?></title>
     </head>
     <body>
         <nav class="navbar">
             <a href="index.php">Commande</a>
             <a href="recap.php">Panier</a>
-            <p><?php echo $totalProduits; ?> produits en session</p>
+            <p><?= $totalProduits; ?> produits en session</p>
         </nav>
 
-        <?php echo $content ?>
+        <main>
+            <h1 class="titre"><?= $titrePage ?></h1>
 
+            <?php
+                if(isset($_SESSION["messages"])) {
+                    echo $_SESSION["messages"];
+                    unset($_SESSION["messages"]);
+                }
+            ?>
+
+            <?= $content ?>
+        </main>
+
+        <script>
+
+            document.getElementById("deleteButton").addEventListener("click", function(event) {
+                confirmation(event);
+            })
+
+            function confirmation(event) {
+                if (!confirm("Voulez-vous vraiment supprimer cet élément ?")) {
+                    event.stopPropagation();
+                    event.preventDefault(); // Empêche le comportement par défaut du bouton, si nécessaire
+                }
+            }
+        </script>
 </body>
 </html>

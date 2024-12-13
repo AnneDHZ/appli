@@ -18,25 +18,35 @@ a{
     color: rgb(0, 0, 0);
 }
 
-.formulaire{
-    /* border: solid 5px rgb(19, 156, 49); */
-    background-color: #99e599;
-    border-radius: 5px;
-    padding: 5px;
-}
-
-.form{
-    /* border: solid 5px red; */
-    display:flex;
-    justify-content: center;
-}
-
 .titre{
     display:flex;
     justify-content: center;
     padding: 10px;
 }
 
-.input{
+.formulaire{
+    /* border: solid 5px rgb(19, 156, 49); */
+    background-color: #99e599;
+    border-radius: 5px;
+    padding: 5px;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.form{
     display: flex;
+    justify-content: center;
+    /* border: solid 5px red; */
+}
+
+
+.label{
+    display: flex;
+    flex-direction: column;
+}
+
+textarea{
+    display:flex;
+    /* justify-content: center; */
 }
