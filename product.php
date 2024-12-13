@@ -20,6 +20,14 @@
         <?= $product['about'];?>
         </p>
         <p class="prix"><?= number_format($product['price'], 2, ", ", "&nbsp;") ?> €</p>
+        <p>
+ <?php 
+            $req = $db->query('SELECT name FROM file');
+            while($data = $req->fetch()){
+                var_dump($data);
+            }
+?>
+        </p>
 </div>
 
 <?php    
@@ -27,4 +35,5 @@
     $title = "Nom du produit";
     $titrePage = "Produit";
     require_once "template.php";
+    require_once "bdd.php";
 ?>

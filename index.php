@@ -38,6 +38,11 @@
                         <input type="url" name="img" id="" class="form-control" placeholder="www.">
                     </label>
                 </p>
+                <form action="index.php" method="POST" enctype="multipart/form-data">
+                    <label for="file">ou <br>Envoyer un fichier :</label>
+                        <input type="file" name="file" class="form-control">
+                        
+                </form>
                 <p>
                     <input type="submit" name="submit" value="Ajouter le produit" class="btn btn-outline-success">
                 </p>
@@ -49,4 +54,5 @@
     $title = "Ajouter un produit";
     $titrePage = "Ajouter un produit";
     require_once "template.php";
+    require_once "bdd.php";
     ?>
