@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar{
+    background-color: rgb(105, 241, 92);
+    display :flex;
+    justify-content: center;
+    gap: 20px;
+    text-decoration: none;
+    /* color: aliceblue; */
+}
+
+a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.formulaire{
+    /* border: solid 5px rgb(19, 156, 49); */
+    background-color: #99e599;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.form{
+    /* border: solid 5px red; */
+    display:flex;
+    justify-content: center;
+}
+
+.titre{
+    display:flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.input{
+    display: flex;
+}
