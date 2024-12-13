@@ -15,7 +15,7 @@
 <div>
         <!-- * les champs présents dans cette page doivent être renseigné dans la page index.php -->
         <h1><?= $product['name'];?></h1>
-        <img src="$product['img'] alt="" class="img"> 
+        <img src="<?=$product['img']?>" alt="" class="img"> 
         <p>
         <?= $product['about'];?>
         </p>
