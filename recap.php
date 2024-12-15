@@ -18,6 +18,7 @@
                     "<thead>",
                     "<tr>",
                     "<th>#</th>",
+                    "<th>Photo</th>",
                     "<th>Nom</th>",
                     "<th>Prix</th>",
                     "<th>Quantité</th>",
@@ -26,11 +27,14 @@
                     "</tr>",
                     "</thead>",
                     "<tbody>";
+
                     $totalGeneral = 0;
+                    
                     foreach($_SESSION['products'] as $index =>$product){
                     
                         echo "<tr>",
                         "<td>".$index."</td>",
+                        "<td><img src='".$product['img']."' alt='image' class='picture'></td>",                        
                         "<td><a href='traitement.php?action=product&id=$index'>".$product['name']."</a></td>",
                         "<td>".number_format($product['price'], 2, ", ", "&nbsp"). "&nbsp;€</td>",
                         "<td><a class='btn btn-outline-secondary btn-left' href='traitement.php?action=down-qtt&id=$index'>-</a>" . $product['qtt'] . "<a class='btn btn-outline-secondary btn-right' href='traitement.php?action=up-qtt&id=$index'> + </a></td>",

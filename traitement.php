@@ -3,44 +3,45 @@
     session_start();
     ob_start();
 // inclure les pages
-    include('function.php');
+    include('functions.php');
     include('bdd.php');
 
 // vérifier si le produit existe , si oui la variable prendra la valeur id sinon il prendra la valeur null
     $id = (isset($_GET["id"])) ? $_GET["id"] : null;
+  
     // variables pour les fichiers envoyés
-    if(isset($_FILES['file'])){
-    $tmpName = $_FILES['file']['tmp_name'];
-    $name = $_FILES['file']['name'];
-    $size = $_FILES['file']['size'];
-    $error = $_FILES['file']['error'];   
-    }
+    // if(isset($_FILES['file'])){
+    //     $tmpName = $_FILES['file']['tmp_name'];
+    //     $name = $_FILES['file']['name'];
+    //     $size = $_FILES['file']['size'];
+    //     $error = $_FILES['file']['error'];   
+    // }
 
     
 //donne le nom du fichier sans les points
-    $tabExtension = explode('.', $name);
+    // $tabExtension = explode('.', $name);
 //mets tt les caractères en minuscules et prend la fin des caractères après le dernier point du nom du fichier donc le type
-    $extension = strtolower(end($tabExtension));
+    // $extension = strtolower(end($tabExtension));
     //Tableau des extensions que l'on accepte
-$extensions = ['jpg', 'png', 'jpeg', 'gif'];
+// $extensions = ['jpg', 'png', 'jpeg', 'gif'];
 //Taille max que l'on accepte
-$maxSize = 400000;
+// $maxSize = 400000;
    //vérifier l'extension et la taille
-    if(in_array($extension, $extensions) && $size <= $maxSize && $error == 0){
+    // if(in_array($extension, $extensions) && $size <= $maxSize && $error == 0){
         //génère un nom unique avec uniqid
-        $uniqueName = uniqid('', true);
+        // $uniqueName = uniqid('', true);
     //ajoute l'extension au nom du fichier
-    $file = $uniqueName.".".$extension;
+    // $file = $uniqueName.".".$extension;
         //envoyer l’image dans notre dossier
-        move_uploaded_file($tmpName, './upload/'.$file);
-    }
-    else{
-        echo "Mauvaise extension";
-    }
+        // move_uploaded_file($tmpName, './upload/'.$file);
+    // }
+    // else{
+        // echo "Mauvaise extension";
+    // }
 
-    $req = $db->prepare('INSERT INTO file (name) VALUES (?)');
-    $req->execute([$file]);
-    echo "Image enregistrée";
+    // $req = $db->prepare('INSERT INTO file (name) VALUES (?)');
+    // $req->execute([$file]);
+    // echo "Image enregistrée";
 
 // actions sur les produits
 // si le produit existe

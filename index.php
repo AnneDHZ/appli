@@ -38,15 +38,15 @@
                         <input type="url" name="img" id="" class="form-control" placeholder="www.">
                     </label>
                 </p>
-                <form action="index.php" method="POST" enctype="multipart/form-data">
-                    <label for="file">ou <br>Envoyer un fichier :</label>
-                        <input type="file" name="file" class="form-control">
-                        
-                </form>
                 <p>
-                    <input type="submit" name="submit" value="Ajouter le produit" class="btn btn-outline-success">
+                    <input type="submit" name="submit" value="Ajouter le produit" class="btn btn-outline-success one">
                 </p>
             </form>    
+            <form action="index.php" method="POST" enctype="multipart/form-data" class="formulaire bis">
+                <label for="file" class="label">Envoyer un fichier :</label>
+                    <input type="file" name="file" class="form-control">
+                    <button type="submit" class="btn btn-outline-success bis">Enregistrer</button>
+            </form>
         </div>
         
     <?php    

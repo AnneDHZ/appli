@@ -22,10 +22,10 @@
         <p class="prix"><?= number_format($product['price'], 2, ", ", "&nbsp;") ?> €</p>
         <p>
  <?php 
-            $req = $db->query('SELECT name FROM file');
-            while($data = $req->fetch()){
-                var_dump($data);
-            }
+            // $req = $db->query('SELECT name FROM file');
+            // while($data = $req->fetch()){
+            //     var_dump($data);
+            // }
 ?>
         </p>
 </div>

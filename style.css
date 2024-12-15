@@ -24,9 +24,17 @@ a{
     padding: 10px;
 }
 
+
+.form{
+    background-color: #99e599;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    /* border: solid 5px red; */
+}
+
 .formulaire{
     /* border: solid 5px rgb(19, 156, 49); */
-    background-color: #99e599;
     border-radius: 5px;
     padding: 5px;
     display:flex;
@@ -35,10 +43,12 @@ a{
     width: 500px;
 }
 
-.form{
-    display: flex;
-    justify-content: center;
-    /* border: solid 5px red; */
+.one{
+    width: 490px;
+}
+
+.bis{
+    margin-top: 20px;
 }
 
 
@@ -61,4 +71,8 @@ textarea{
 
 .img{
     width: 30vw;
+}
+
+.picture{
+    width: 2vw;
 }
