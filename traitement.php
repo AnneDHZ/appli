@@ -57,7 +57,7 @@
                     $about = filter_input(INPUT_POST, "about", FILTER_SANITIZE_STRING);
                     $img = filter_input(INPUT_POST, "img", FILTER_SANITIZE_URL);
                             
-                        if($name && $price && $qtt){
+                        if($name && $price && $qtt && $about && $img){
                             $product = [
                                 "name"=> $name,
                                 "price"=> $price,
