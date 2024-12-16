@@ -1,7 +1,3 @@
-<?php
-// session_start();
-?>
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -20,7 +16,6 @@
                 <a href="recap.php" class="navbar-brand">Panier :</a>
                 <span class="navbar-brand"><?= $totalProduits; ?> produits en session</span>
             </p>
-            <!-- <p class="navbar-brand"></p> -->
         </nav>
 
         <main>

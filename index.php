@@ -7,7 +7,7 @@
 
         
         <div class="form">
-            <form action="traitement.php?action=add" method="post" class="formulaire">
+            <form action="traitement.php?action=add" method="post" enctype="multipart/form-data" class="formulaire">
                 <p>
                     <label class="label">
                         Nom du produit : 
@@ -33,26 +33,21 @@
                     </label>
                 </p>
                 <p>
-                    <label class="label">
-                        URL de l'image :
-                        <input type="url" name="img" id="" class="form-control" placeholder="www.">
+                    <label for="file" class="label">
+                        Envoyer un fichier :
+                        <input type="file" name="file" class="form-control">
                     </label>
                 </p>
                 <p>
                     <input type="submit" name="submit" value="Ajouter le produit" class="btn btn-outline-success one">
                 </p>
             </form>    
-            <form action="index.php" method="POST" enctype="multipart/form-data" class="formulaire bis">
-                <label for="file" class="label">Envoyer un fichier :</label>
-                    <input type="file" name="file" class="form-control">
-                    <button type="submit" class="btn btn-outline-success bis">Enregistrer</button>
-            </form>
         </div>
         
-    <?php    
-    $content = ob_get_clean();
-    $title = "Ajouter un produit";
-    $titrePage = "Ajouter un produit";
-    require_once "template.php";
-    require_once "bdd.php";
-    ?>
+<?php    
+$content = ob_get_clean();
+$title = "Ajouter un produit";
+$titrePage = "Ajouter un produit";
+require_once "template.php";
+require_once "bdd.php";
+?>
